@@ -14,7 +14,7 @@ class Doador(models.Model):
         ('8', u'O-'),
     )
     tipo_Sanguíneo = models.CharField(max_length=3, choices=tipo_Sanguíneo, default="")
-    
+
     gênero = (
         (u'M', u'Masculino'),
         (u'F', u'Feminino'),
