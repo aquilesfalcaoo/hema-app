@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestão | Doação de Sangue</title>
+    <script src="js/functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/doador.css" />
+  </head>
+  <body>
+    <h1>Lista de Doadores</h1>
+    <ul>
+      {% for doador in doador %}
+      <a href="{% url 'update_doador' doador.id %}">
+        <li>{{ doador.nome }}</li>
+        <li>{{ doador.RG }}</li>
+      </a>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'create_doador' %}">Cadastrar Novo Doador</a>
+  </body>
+</html>
