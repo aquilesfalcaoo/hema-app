@@ -1,14 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gestão | Doação de Sangue</title>
-    <script src="js/functions.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/doador.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/doador.css' %}"
+    />
   </head>
   <body>
-    <h1>Lista de Doadores</h1>
+    <header>
+      <h1>Lista de Doadores</h1>
+    </header>
     <ul>
       {% for doador in doador %}
       <a href="{% url 'update_doador' doador.id %}">
@@ -17,6 +23,8 @@
       </a>
       {% endfor %}
     </ul>
-    <a href="{% url 'create_doador' %}">Cadastrar Novo Doador</a>
+    <button class="button button4">
+      <a href="{% url 'create_doador' %}">Cadastrar Novo Doador</a>
+    </button>
   </body>
 </html>
