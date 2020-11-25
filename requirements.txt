@@ -10,6 +10,7 @@ django-allauth==0.42.0
 django-bootstrap-form==3.4
 django-crispy-forms==1.10.0
 django-db-logger==0.1.10
+gunicorn==19.7.1
 idna==2.10
 iniconfig==1.0.1
 more-itertools==8.5.0
