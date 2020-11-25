@@ -30,14 +30,21 @@
       <div class="col-12">
         <div class="row">
           <form class="formulario" method="POST">
-            {% csrf_token %} {{ form|crispy }}
+            {% csrf_token %}
+
+            {{ form|crispy }}
+
             <button type="submit" class="btn btn-success">Salvar</button>
-            <a href="{% url 'delete_doador' doador.id %}" class="btn btn-danger"
-              >Excluir</a
-            >
-            {% for list_doador in list_doador %} {% endfor %}
           </form>
-          {% if doador %} {% endif %}
+          {% if doador %}
+            <div class="container">
+              <div class="col-12">
+                <div class="row">
+                  <a href="{% url 'delete_doador' doador.id %}" class="btn btn-danger">Excluir</a>
+                </div>
+              </div>
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>

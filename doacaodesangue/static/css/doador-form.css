@@ -5,7 +5,11 @@ h1 {
 }
 
 .btn-danger {
-  margin-left: 55px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: 25px;
+  margin-top: -37px;
 }
 
 .formulario {
