@@ -24,15 +24,15 @@
   </head>
   <body>
     <div class="titulo">
-      <h1>Cadastrar Novo Doador</h1>
+      <h1></h1>
     </div>
     <div class="container">
       <div class="col-12">
         <div class="row">
-          <form method="post">
+          <form style="margin: 0 auto" method="post">
             {% csrf_token %}
             <h2>Você tem certeza que deseja excluir {{ doador.form }} ?</h2>
-            <button type="submit" class="btn btn-danger">Confirmar</button>
+            <button type="submit" class="btn btn-success">Confirmar</button>
           </form>
         </div>
       </div>
