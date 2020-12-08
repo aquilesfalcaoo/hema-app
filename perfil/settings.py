@@ -20,12 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '96v+4y2i&2t)u+yz#47*r$tku=u9zh^b&y*@b&)hm2x8a6j2ld'
+SECRET_KEY = os.environ.get('SECRET_KEY')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'application-blood-donation.herokuapp.com']
 
 STATICFILES_DIRS = [
     "../static",
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
     'doacaodesangue',
     'perfil',
     'crispy_forms',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -75,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'perfil.wsgi.application'
+WSGI_APPLICATION = 'doacaodesangue.wsgi.application'
 
 
 # Database
