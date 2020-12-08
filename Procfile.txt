@@ -1,1 +1,1 @@
-web: gunicorn doacaodesangue.wsgi
+web: gunicorn doacaodesangue.wsgi --log-file -
