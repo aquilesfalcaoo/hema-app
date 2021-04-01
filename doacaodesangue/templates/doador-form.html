@@ -30,13 +30,18 @@
       <div class="col-12">
         <div class="row">
           <form class="formulario" method="POST">
+<<<<<<< HEAD
             {% csrf_token %}
 
             {{ form|crispy }}
+=======
+            {% csrf_token %} {{ form|crispy }}
+>>>>>>> 7208dc4 (added jquery function)
 
             <button type="submit" class="btn btn-success">Salvar</button>
           </form>
           {% if doador %}
+<<<<<<< HEAD
             <div class="container">
               <div class="col-12">
                 <div class="row">
@@ -44,15 +49,34 @@
                 </div>
               </div>
             </div>
+=======
+          <div class="container">
+            <div class="col-12">
+              <div class="row">
+                <a
+                  href="{% url 'delete_doador' doador.id %}"
+                  class="btn btn-danger"
+                  >Excluir</a
+                >
+              </div>
+            </div>
+          </div>
+>>>>>>> 7208dc4 (added jquery function)
           {% endif %}
         </div>
       </div>
     </div>
+<<<<<<< HEAD
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
     ></script>
+=======
+    <script src="{% static 'jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'jquery.mask.min.js' %}"></script>
+    <script src="{% static 'mask.js' %}"></script>
+>>>>>>> 7208dc4 (added jquery function)
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
       integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
