@@ -1,7 +1,12 @@
+body {
+  background: #343a40 !important;
+}
+
 h1 {
   text-align: center;
   padding-bottom: 35px;
   padding-top: 35px;
+  color: #fff;
 }
 
 .btn-danger {
@@ -14,4 +19,5 @@ h1 {
 
 .formulario {
   margin: 0 auto;
+  color: #fff;
 }

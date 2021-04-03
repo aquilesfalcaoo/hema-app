@@ -1,7 +1,17 @@
+body {
+  background: #343a40 !important;
+}
+
+.list-group-item {
+  background: #343a40 !important;
+  color: #fff;
+}
+
 h1 {
   text-align: center;
   padding-bottom: 35px;
   padding-top: 35px;
+  color: #fff;
 }
 
 ul {
@@ -15,8 +25,10 @@ li {
 a {
   margin-top: 25px;
   text-align: center;
+  color: #fff !important;
 }
 
 .btn {
   margin-left: -33px;
+  width: 193px;
 }
