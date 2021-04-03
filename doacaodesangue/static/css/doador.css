@@ -1,10 +1,11 @@
 body {
-  background: #343a40 !important;
+  background: #262d31 !important;
 }
 
 .list-group-item {
-  background: #343a40 !important;
+  background: #262d31 !important;
   color: #fff;
+  border: 1px solid #3d3d3d !important;
 }
 
 h1 {
